@@ -1,0 +1,28 @@
+//
+//  doulian-prefix.pch
+//  doulian
+//
+//  Created by Suny on 16/8/23.
+//  Copyright © 2016年 maomao. All rights reserved.
+//
+
+#ifndef doulian_prefix_pch
+#define doulian_prefix_pch
+
+#import "Macro.h"
+#import "OLGhostAlertView.h"
+#import "MBProgressHUD.h"
+#import "UIColor+SPB.h"
+#import "NSString+MD5Addition.h"
+#import "BaseViewController.h"
+#import "MJRefresh.h"
+#import "MyUtil.h"
+#import "NSObject+YYModel.h"
+#import "UIImageView+AFNetworking.h"
+#import "SJAvatarBrowser.h"
+#import "NSString+URL.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* doulian_prefix_pch */

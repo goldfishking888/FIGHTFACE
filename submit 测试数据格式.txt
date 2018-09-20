@@ -1,0 +1,247 @@
+-----------------cert A 测试数据 START ----------------------
+
+{
+  "inspectionOutcome": {
+    "bookingId": 125002557,
+    "failedCertRequest": {},
+    "fileIdList": [],                       // 调用上传文件接口，拍照和画图的上传，返回fileId 赋值，逗号隔开
+    "gasFreeCertRequest": {
+      "bookingId": 125002557,
+      "caseContent": "CASE CONTENT",
+      "examinedContent": "All cargo tanks (No. 1 to No. 5)",
+      "nameValueList": [
+        {
+          "name": "12",
+          "value": "12"
+        }
+      ],
+      "timeOfIssue": ""                     //none inspection 才有值
+    },
+    "inspnDetail": {
+      "cargoTanks": "66",
+      "fotCheck": true,
+      "lastCargo": "MFO",
+      "vesselGT": "300"
+    },
+    "inspnOutcome": {
+      "certNo": "",                          // A-(booking-ref-number)
+      "certTypeEnum": "TYPE_A",
+      "inspnOutcomeEnum": "PASSED"
+    }
+  },
+  "masterCertificate": {
+    "bookingId": 125002557,
+    "byValueName": "test by value",
+    "certNo": "",                             // A-(booking-ref-number)
+    "certTypeEnum": "TYPE_A",
+    "firstCondName": "N",
+    "masterName": "master AAA",
+    "receiptDate": "31/09/2018 17:30",
+    "secondCondName": "N",
+    "signatureId": 0,                       //这里要先调用上传签名接口，返回fileid 赋值
+    "totalFuelOilNumber": 66
+  },
+  "notifyEmailList": [
+    {
+      "email": "406479283@QQ.COM",
+      "type": "Master"
+    },
+	{
+      "email": "406479283@QQ.COM",
+      "type": "Agent"
+    }
+  ],
+  "signCertificate": {
+    "designation": "test design",
+    "name": "tester name",
+    "signatureId": 0,                     //这里要先调用上传签名接口，返回fileid 赋值
+    "templateId": 0,                      // 默认0，不用传
+    "timeOfIssue": "31/09/2018 11:30"
+  }
+}
+
+-----------------cert A 测试数据 END ----------------------
+
+
+
+
+
+
+
+
+-----------------cert C 测试数据 START ----------------------
+
+
+{
+  "inspectionOutcome": {
+    "bookingId": 125002555,
+    "failedCertRequest": {},
+    "fileIdList": [1013561084974592],
+    "gasFreeCertRequest": {
+      "bookingId": 125002555,
+      "caseContent": "CASE CONTENT",
+      "examinedContent": "All cargo tanks (No. 1 to No. 5)",
+      "nameValueList": [
+        {
+          "name": "12",
+          "value": "12"
+        }
+      ],
+      "timeOfIssue": ""
+    },
+    "inspnDetail": {
+      "cargoTanks": "66",
+      "fotCheck": true,
+      "lastCargo": "MFO",
+      "vesselGT": "300"
+    },
+    "inspnOutcome": {
+      "certNo": "",
+      "certTypeEnum": "TYPE_C",
+      "inspnOutcomeEnum": "PASSED"
+    }
+  },
+  "masterCertificate": {
+    "bookingId": 125002555,
+    "byValueName": "test by value",
+    "certNo": "",
+    "certTypeEnum": "TYPE_C",
+    "firstCondName": "Y",
+    "masterName": "master AAA",
+    "receiptDate": "31/09/2018 17:30",
+    "secondCondName": "Y",
+    "signatureId": 0,                     
+    "totalFuelOilNumber": 66
+  },
+  "notifyEmailList": [
+    {
+      "email": "406479283@QQ.COM",
+      "type": "Master"
+    },
+	{
+      "email": "406479283@QQ.COM",
+      "type": "Agent"
+    }
+  ],
+  "signCertificate": {
+    "designation": "test design",
+    "name": "tester name",
+    "signatureId": 0,                   
+    "templateId": 0,                     
+    "timeOfIssue": "31/09/2018 11:30"
+  }
+}
+
+
+
+
+-----------------cert C 测试数据 END ----------------------
+
+
+
+
+-----------------Failed 测试数据 START ----------------------
+
+
+
+{
+  "inspectionOutcome": {
+    "bookingId": 125002555,
+   "failedCertRequest": {
+    "bookingId": 125002555,
+    "firstCondition": "Y",
+    "nameValueList": [
+      {
+        "name": "20",
+        "value": "20"
+      }
+    ],
+    "remark": "this is remarks",
+    "secondCondition": "N"
+  },
+    "fileIdList": [],
+    "gasFreeCertRequest": {},
+    "inspnDetail": {
+      "cargoTanks": "88",
+      "fotCheck": true,
+      "lastCargo": "MFO",
+      "vesselGT": "300"
+    },
+    "inspnOutcome": {
+      "certNo": "",
+      "certTypeEnum": "TYPE_F",
+      "inspnOutcomeEnum": "FAILED"
+    }
+  },
+  "masterCertificate": {},
+  "notifyEmailList": [
+    {
+      "email": "406479283@QQ.COM",
+      "type": "Master"
+    },
+	{
+      "email": "406479283@QQ.COM",
+      "type": "Agent"
+    }
+  ],
+  "signCertificate": {
+    "designation": "failed design",
+    "name": "failed name",
+    "signatureId": 1016127547024384,                   
+    "templateId": 0,                     
+    "timeOfIssue": "31/09/2018 11:30"
+  }
+}
+
+
+
+-----------------Failed 测试数据 END ----------------------
+
+
+-----------------None-inspection  测试数据 START ----------------------
+
+
+{
+  "inspectionOutcome": {
+    "bookingId": 125002556,
+    "failedCertRequest": {},
+    "fileIdList": [],
+    "gasFreeCertRequest": {
+      "bookingId": 125002556,
+      "caseContent": "reson for none insepecction",          //对应 前台reason 字段
+      "examinedContent": "",
+      "nameValueList": [
+        {
+          "name": "12",
+          "value": "12"
+        }
+      ],
+      "timeOfIssue": "31/09/2018"          
+    },
+    "inspnDetail": {
+      "cargoTanks": "66",
+      "fotCheck": true,
+      "lastCargo": "MFO",
+      "vesselGT": "300"
+    },
+    "inspnOutcome": {
+      "certNo": "",
+      "certTypeEnum": "TYPE_N",
+      "inspnOutcomeEnum": "NONE_INSPECTION"
+    }
+  },
+  "masterCertificate": {},
+  "notifyEmailList": [
+    {
+      "email": "406479283@QQ.COM",
+      "type": "Master"
+    },
+	{
+      "email": "406479283@QQ.COM",
+      "type": "Agent"
+    }
+  ],
+  "signCertificate": {}
+}
+
+-----------------None-inspection  测试数据 END ----------------------
